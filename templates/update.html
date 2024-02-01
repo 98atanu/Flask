@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+
+{% block Body %}
+<div class="container my-4">
+    <form action="/update/{{user_info.sno}}" method="POST">
+        <h2>Update UserForm</h2>
+        <input class="form-control form-control my-2" type="text" value="{{user_info.customer_name}}" name="customer_name" placeholder="Customer Name"
+            aria-label=" Customer Name ">
+        <input class="form-control form-control my-2" type="text" value="{{user_info.product_name}}" name="product_name" placeholder="Enter The Product"
+            aria-label=" Enter The Product ">
+        <input class="form-control form-control my-2" type="text" value="{{user_info.price}}" name="price" placeholder="Enter Price"
+            aria-label=" Enter Price ">
+        <button type="submit" class="btn btn-outline-primary my-1">Update</button>
+    </form>
+</div>
+{% endblock Body %}
